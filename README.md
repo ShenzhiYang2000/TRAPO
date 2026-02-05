@@ -141,7 +141,7 @@ We currently support automated evaluation on six widely used mathematical reason
 
 You can reproduce our results by running the following commands:
 ```bash
-ROOT=/ossfs/workspace/aitech_aidata/code/TraPO
+ROOT=YourRootPath
 TASK=math # math arc_c gpqa mmlu_pro 
 CKPT=labeled_1k_unlabeled_1k_ood
 
@@ -150,8 +150,8 @@ OUTPUT_DIR=$ROOT/results/$CKPT-$TASK/
 mkdir -p $OUTPUT_DIR
 
 # If you want to evaluate other models, you can change the model path and name.
-MODEL_PATH=$ROOT/trapo/verl/checkpoints/semi-grpo-indomain/$CKPT/best/actor
-
+MODEL_PATH=YourModelPath
+ 
 if [ $MODEL_NAME == "eurus-2-7b-prime-zero" ]; then 
   TEMPLATE=prime
 elif [ $MODEL_NAME == "simple-rl-zero" ]; then
@@ -160,7 +160,7 @@ else
   TEMPLATE=own
 fi
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 python $ROOT/eval_scripts/generate_vllm.py \
+CUDA_VISIBLE_DEVICES=0,1,2,3 python $ROOT/Weakly_Supervised/scripts/eval/generate_vllm.py \
   --model_path $MODEL_PATH \
   --input_file $DATA \
   --remove_system True \
