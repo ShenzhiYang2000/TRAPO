@@ -139,7 +139,6 @@ The model weights will be uploaded to HuggingFace later.
 ## Reproducing the Results 
 We currently support automated evaluation on six widely used mathematical reasoning benchmarks (AIME24/25, AMC, MATH-500, Minerva, and Olympiad) and three out-of-distribution tasks (ARC-c, GPQA-diamond, and MMLU-pro).
 
-You can reproduce our results by running the following commands:
 ```bash
 ROOT=YourRootPath
 TASK=math # math arc_c gpqa mmlu_pro 
