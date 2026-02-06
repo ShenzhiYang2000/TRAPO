@@ -87,7 +87,6 @@ conda create -n trapo python=3.10
 conda activate trapo
 cd TraPO
 pip install -r requirements.txt
-pip install -e .
 pip3 install -e .[vllm]
 pip3 install math-verify==0.8.0
 ```
