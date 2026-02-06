@@ -85,7 +85,7 @@ You can install TRAPO dependencies by running the following commands:
 ```bash
 conda create -n trapo python=3.10
 conda activate trapo
-cd TraPO
+cd TRAPO
 pip install -r requirements.txt
 pip3 install -e .[vllm]
 pip3 install math-verify==0.8.0
